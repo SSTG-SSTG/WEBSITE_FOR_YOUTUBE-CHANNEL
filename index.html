@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Gaming Channel — YouTube Gaming Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">Gaming<span class="accent">Hub</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#latest">Latest Videos</a>
+          <a href="#playlists">Playlists</a>
+          <a href="https://youtube.com/@sstgsstg-mk5mp" target="_blank" class="btn primary">Subscribe on YouTube</a>
+        </nav>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero channel-hero">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <div class="channel-avatar" style="background:linear-gradient(135deg, #7cf2ff, #8a48ff)"></div>
+            <h1 class="neon">SSTG Gaming</h1>
+            <p class="lead">Epic gameplay, guides, and community — all in one place.</p>
+            <div class="hero-actions">
+              <button id="subscribeBtn" class="btn primary large">🔔 Subscribe</button>
+              <a href="https://youtube.com/@sstgsstg-mk5mp" target="_blank" class="btn ghost">Visit YouTube</a>
+            </div>
+            <div class="channel-stats">
+              <div><strong id="subCount">335</strong> Subscribers</div>
+              <div><strong id="videoCount">375</strong> Videos</div>
+              <div><strong id="viewCount">174.8K</strong> Total Views</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="latest" class="section">
+        <div class="container">
+          <h2 class="section-title">Latest Videos</h2>
+          <div class="grid grid-3">
+            <article class="video-card" tabindex="0">
+              <div class="video-wrapper">
+                  <iframe id="latestUpload" width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Recently uploaded" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-body">
+                  <h3 id="latestTitle">Recently Uploaded</h3>
+                  <p class="muted" id="latestMeta">Loading latest video...</p>
+                </div>
+            </article>
+
+            <article class="video-card" tabindex="0">
+              <div class="video-wrapper">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-body">
+                <h3>Game Review & Tips</h3>
+                <p class="muted">23K views · 5 days ago</p>
+              </div>
+            </article>
+
+            <article class="video-card" tabindex="0">
+              <div class="video-wrapper">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/jNQXAC9IVRw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="video-body">
+                <h3>Speedrun Challenge</h3>
+                <p class="muted">91K views · 1 week ago</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="playlists" class="section dark-section">
+        <div class="container">
+          <h2 class="section-title">Playlists</h2>
+          <div class="grid grid-2">
+            <div class="playlist-card">
+              <div class="playlist-thumb"></div>
+              <h3>Trending Games 2025</h3>
+              <p class="muted">18 videos</p>
+            </div>
+            <div class="playlist-card">
+              <div class="playlist-thumb"></div>
+              <h3>Quick Guides & Tutorials</h3>
+              <p class="muted">42 videos</p>
+            </div>
+            <div class="playlist-card">
+              <div class="playlist-thumb"></div>
+              <h3>Speedruns & Challenges</h3>
+              <p class="muted">31 videos</p>
+            </div>
+            <div class="playlist-card">
+              <div class="playlist-thumb"></div>
+              <h3>Community Plays</h3>
+              <p class="muted">56 videos</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section social-section">
+        <div class="container">
+          <h2 class="section-title">Connect With Us</h2>
+          <div class="social-links">
+            <a href="https://youtube.com/@sstgsstg-mk5mp" target="_blank" class="social-btn youtube">YouTube</a>
+            <a href="https://twitch.tv/yourstream" target="_blank" class="social-btn twitch">Twitch</a>
+            <a href="https://discord.gg/yourcommunity" target="_blank" class="social-btn discord">Discord</a>
+            <a href="https://twitter.com/yourhandle" target="_blank" class="social-btn twitter">Twitter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> SSTG Gaming</div>
+        <div class="foot-links muted">
+          <a href="https://youtube.com/@sstgsstg-mk5mp" target="_blank">YouTube</a> · 
+          <a href="#">Privacy</a> · 
+          <a href="#">Contact</a> · 
+          <a href="#" id="adminToggle">Admin</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Admin modal (enter API key + channel ID) -->
+    <div id="adminModal" class="admin-modal" aria-hidden="true">
+      <div class="admin-modal-content">
+        <button id="adminClose" class="admin-close" aria-label="Close">×</button>
+        <h3>Admin Settings</h3>
+        <p class="muted">Enter your YouTube Data API key to enable automatic fetching of your most recent upload.</p>
+        <label style="display:block;margin-top:12px">API Key
+          <input id="adminApiKey" type="text" placeholder="Enter API key" style="width:100%;margin-top:6px;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit" />
+        </label>
+        <label style="display:block;margin-top:12px">Channel ID
+          <input id="adminChannelId" type="text" placeholder="Channel ID (UC...)" value="UC4gpEV7HpnCatnRnK-CV5rg" style="width:100%;margin-top:6px;padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit" />
+        </label>
+        <div style="margin-top:14px;display:flex;gap:8px;align-items:center">
+          <button id="adminSave" class="btn primary">Save</button>
+          <button id="adminClear" class="btn ghost">Clear</button>
+          <div id="adminMsg" class="muted" style="margin-left:8px"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
